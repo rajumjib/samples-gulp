@@ -1,0 +1,23 @@
+{
+  "name": "google_transalate",
+  "version": "1.0.0",
+  "description": "Google Transalate",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "translate"
+  ],
+  "author": "jahirul islam",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "google-translate": "^2.0.5",
+    "gulp": "^3.8.11",
+    "gulp-foreach": "^0.1.0",
+    "gulp-recursive-folder": "^0.9.4",
+    "gulp-shell": "^0.4.1",
+    "gulp-translate-properties": "^1.1.0",
+    "underscore": "^1.8.3"
+  }
+}
