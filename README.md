@@ -29,6 +29,14 @@ To run translation task from gulpfile-translate.js
 
     gulp --gulpfile gulpfile-translate.js
 
+### Run sample to split html file
+
+Check and update samples/test/template.html file
+
+To run split task from gulpfile-split.js
+
+    gulp --gulpfile gulpfile-split.js
+
 # To Contribute
 
 Please fork and send pull request, welcome!
