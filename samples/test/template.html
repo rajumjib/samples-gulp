@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Template</title>
+  <!-- inject:head:js -->
+  <!-- only importantFile.js will be injected here -->
+  <!-- endinject -->
+
+  <!-- extract:common:.css:test/styles:append:all -->
+  <style type="text/css">
+  	.hide {
+  		display: none; 
+  	}
+  	.show {
+  		display: block;
+  	}
+  </style>
+  <!-- endextract -->
+
+  <!-- extract:view:.css:test/styles/view:replace -->
+  <style type="text/css">
+  	div.view {
+  		
+  	}
+  	div.view .title {
+  		
+  	}
+  </style>
+  <!-- endextract -->
+  
+  <!-- extract:lib:.js:test/scripts:replace -->
+  <script type="text/javascript">
+    var a = 1;
+    console.log(a);
+  </script>
+  <!-- endextract -->
+</head>
+<body>
+  <div>
+  	Title
+  </div>
+
+  <!-- extract:view:.htm:test/template/views:replace -->
+  <div class="show">
+  	<div> See Me </div>
+  </div>
+  <div class="hide">
+  	<span> Hidden </span>
+  </div>
+  <!-- endextract -->
+
+  <!-- inject:js -->
+  <!-- the rest of the *.js files will be injected here -->
+  <!-- endinject -->
+
+  <!-- extract:run:.js:test/scripts/view:replace -->
+  <script type="text/javascript">
+    (function () {
+      console.log('run');
+    })();
+  </script>
+  <!-- endextract -->
+  <!-- extract:global:.js:test/scripts:append:private -->
+  <script type="text/javascript">
+    var templeteName = function () {
+        return 'view';
+    };
+  </script>
+  <!-- endextract -->
+  <!-- extract:global:.js:test/scripts:append:public -->
+  <script type="text/javascript">
+        templete: templeteName,
+  </script>
+  <!-- endextract -->
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Module</title>
+  <!-- inject:head:js -->
+  <!-- endinject -->
+
+  <!-- extract:common:.css:app/styles:append:all -->
+  <style type="text/css">
+  	.module {
+  		display: block; 
+  	}
+  	
+  </style>
+  <!-- endextract -->
+
+  <!-- extract:module:.css:app/styles/view:replace -->
+  <style type="text/css">
+  	div.module {
+  		
+  	}
+  	div.module .title {
+  		
+  	}
+  </style>
+  <!-- endextract -->
+  
+</head>
+<body>
+  <div>
+  	Title
+  </div>
+
+
+  <!-- inject:js -->
+  <!-- endinject -->
+
+  <!-- extract:module:.js:app/scripts/view:replace -->
+  <script type="text/javascript">
+    (function () {
+      console.log('module');
+    })();
+  </script>
+  <!-- endextract -->
+  <!-- extract:global:.js:app/scripts:append:private:module -->
+  <script type="text/javascript">
+    var moduleName = function () {
+        return 'module';
+    };
+  </script>
+  <!-- endextract -->
+  <!-- extract:global:.js:app/scripts:append:public:module -->
+  <script type="text/javascript">
+        module: moduleName,
+  </script>
+  <!-- endextract -->
+</body>
+</html>
