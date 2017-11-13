@@ -17,6 +17,7 @@
     "gulp-foreach": "^0.1.0",
     "gulp-recursive-folder": "^0.9.4",
     "gulp-shell": "^0.4.1",
+    "gulp-split": "^1.1.1",
     "gulp-translate-properties": "^1.2.0",
     "underscore": "^1.8.3"
   }

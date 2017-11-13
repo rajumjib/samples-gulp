@@ -3,7 +3,7 @@ var htmlsplit = require('gulp-split');
 
 gulp.task('split', function () {
 
-    return gulp.src('samples/template.html')
+    return gulp.src('samples/test/template.html')
         .pipe(htmlsplit())
         .pipe(gulp.dest('./samples/results'));
 });
@@ -28,3 +28,5 @@ gulp.task('splitAll', function () {
         }))
         .pipe(gulp.dest('./samples/results'));
 });
+
+gulp.task('default',['split']);
